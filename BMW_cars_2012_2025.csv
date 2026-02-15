@@ -1,0 +1,158 @@
+Model,Series,Year,Body_Type,Engine_Type,Displacement_L,Cylinders,Horsepower,Torque_lb_ft,Drivetrain,Transmission,0_60_mph_sec,Top_Speed_mph,Fuel_Economy_City_mpg,Fuel_Economy_Highway_mpg,Seating_Capacity,MSRP_USD,Special_Features
+328i,3 Series,2012,Sedan,TwinPower Turbo I4,2.0,4,240,255,RWD,8-Speed Auto,5.9,130,23,34,5,34900,Turbocharged
+335i,3 Series,2012,Sedan,TwinPower Turbo I6,3.0,6,300,300,RWD,8-Speed Auto,5.1,155,19,28,5,43500,Turbocharged
+328i,3 Series,2012,Coupe,TwinPower Turbo I4,2.0,4,240,255,RWD,6-Speed Manual,6.1,130,22,34,4,38700,Turbocharged
+335i,3 Series,2012,Coupe,TwinPower Turbo I6,3.0,6,300,300,RWD,7-Speed DCT,4.9,155,18,28,4,44900,Turbocharged
+ActiveHybrid 3,3 Series,2012,Sedan,TwinPower Turbo I6 Hybrid,3.0,6,335,330,RWD,8-Speed Auto,5.3,155,23,30,5,50500,Hybrid Electric Motor
+528i,5 Series,2012,Sedan,TwinPower Turbo I4,2.0,4,240,260,RWD,8-Speed Auto,6.2,130,23,33,5,46900,Turbocharged
+535i,5 Series,2012,Sedan,TwinPower Turbo I6,3.0,6,300,300,RWD,8-Speed Auto,5.5,155,20,30,5,52200,Turbocharged
+X3 xDrive28i,X Series,2012,SUV,TwinPower Turbo I4,2.0,4,240,260,AWD,8-Speed Auto,6.5,130,20,28,5,37100,SAV
+X5 xDrive35i,X Series,2012,SUV,TwinPower Turbo I6,3.0,6,300,300,AWD,8-Speed Auto,6.5,130,17,23,5,47500,7-Seater Available
+Z4 sDrive28i,Z Series,2012,Roadster,TwinPower Turbo I4,2.0,4,240,260,RWD,8-Speed Auto,5.7,130,22,32,2,48650,Convertible
+320i,3 Series,2014,Sedan,TwinPower Turbo I4,2.0,4,180,200,RWD,8-Speed Auto,7.1,130,24,36,5,32750,Entry Level
+328i,3 Series,2014,Sedan,TwinPower Turbo I4,2.0,4,240,255,RWD,8-Speed Auto,5.9,130,24,36,5,38250,Turbocharged
+328d,3 Series,2014,Sedan,TwinPower Turbo I4 Diesel,2.0,4,180,280,RWD,8-Speed Auto,7.2,130,32,45,5,40250,First Diesel in US
+335i,3 Series,2014,Sedan,TwinPower Turbo I6,3.0,6,300,300,RWD,8-Speed Auto,4.7,155,22,32,5,43550,Turbocharged
+M3,M Series,2014,Sedan,Twin-Turbo I6,3.0,6,425,406,RWD,6-Speed Manual,3.9,155,17,26,5,62000,M Performance
+M4,M Series,2014,Coupe,Twin-Turbo I6,3.0,6,425,406,RWD,7-Speed DCT,4.1,155,17,25,4,65125,M Performance
+640i,6 Series,2014,Coupe,TwinPower Turbo I6,3.0,6,315,330,RWD,8-Speed Auto,5.3,155,20,30,4,73600,Gran Turismo
+X3 xDrive28i,X Series,2014,SUV,TwinPower Turbo I4,2.0,4,240,260,AWD,8-Speed Auto,6.5,130,22,30,5,38400,SAV Facelift
+X5 xDrive35i,X Series,2014,SUV,TwinPower Turbo I6,3.0,6,300,300,AWD,8-Speed Auto,6.5,130,18,27,5,54650,7-Seater Available
+320i,3 Series,2015,Sedan,TwinPower Turbo I4,2.0,4,180,200,RWD,8-Speed Auto,7.1,130,24,36,5,32950,Entry Level
+328i,3 Series,2015,Sedan,TwinPower Turbo I4,2.0,4,240,255,RWD,8-Speed Auto,5.9,130,24,36,5,38570,Turbocharged
+328d,3 Series,2015,Sedan,TwinPower Turbo I4 Diesel,2.0,4,180,280,RWD,8-Speed Auto,7.2,130,31,43,5,40750,Diesel Efficiency
+335i,3 Series,2015,Sedan,TwinPower Turbo I6,3.0,6,300,300,RWD,8-Speed Auto,4.7,155,23,35,5,44000,Turbocharged
+M3,M Series,2015,Sedan,Twin-Turbo I6,3.0,6,425,406,RWD,6-Speed Manual,3.9,155,17,26,5,62400,M Performance
+M4,M Series,2015,Coupe,Twin-Turbo I6,3.0,6,425,406,RWD,7-Speed DCT,4.1,155,17,25,4,65700,M Performance
+228i,2 Series,2015,Coupe,TwinPower Turbo I4,2.0,4,240,255,RWD,8-Speed Auto,5.4,130,24,35,4,32100,Compact Sports Coupe
+M235i,2 Series,2015,Coupe,TwinPower Turbo I6,3.0,6,320,330,RWD,6-Speed Manual,4.8,155,22,32,4,44450,Performance Coupe
+528i,5 Series,2015,Sedan,TwinPower Turbo I4,2.0,4,240,260,RWD,8-Speed Auto,6.2,130,23,34,5,49750,Executive Sedan
+535i,5 Series,2015,Sedan,TwinPower Turbo I6,3.0,6,300,300,RWD,8-Speed Auto,5.5,155,22,32,5,54900,Turbocharged
+740i,7 Series,2015,Sedan,TwinPower Turbo I6,3.0,6,315,330,RWD,8-Speed Auto,5.4,155,20,29,5,74000,Luxury Flagship
+750i,7 Series,2015,Sedan,TwinPower Turbo V8,4.4,8,445,480,RWD,8-Speed Auto,4.5,155,16,24,5,93900,V8 Power
+X1 xDrive28i,X Series,2015,SUV,TwinPower Turbo I4,2.0,4,240,258,AWD,8-Speed Auto,6.3,130,22,32,5,30900,Compact SAV
+X3 xDrive28i,X Series,2015,SUV,TwinPower Turbo I4,2.0,4,240,260,AWD,8-Speed Auto,6.5,130,21,28,5,38400,SAV
+X5 xDrive35i,X Series,2015,SUV,TwinPower Turbo I6,3.0,6,300,300,AWD,8-Speed Auto,6.5,130,18,27,5,54650,7-Seater Available
+X6 xDrive35i,X Series,2015,SUV,TwinPower Turbo I6,3.0,6,300,300,AWD,8-Speed Auto,6.4,130,18,27,5,59600,Sports Activity Coupe
+320i,3 Series,2016,Sedan,TwinPower Turbo I4,2.0,4,180,200,RWD,8-Speed Auto,7.1,130,24,36,5,33150,Entry Level
+330i,3 Series,2016,Sedan,TwinPower Turbo I4,2.0,4,248,258,RWD,8-Speed Auto,5.6,130,25,36,5,38750,B48 Engine
+330e,3 Series,2016,Sedan,TwinPower Turbo I4 PHEV,2.0,4,248,310,RWD,8-Speed Auto,5.9,130,31,71,5,44695,Plug-in Hybrid
+340i,3 Series,2016,Sedan,TwinPower Turbo I6,3.0,6,320,330,RWD,8-Speed Auto,4.6,155,23,34,5,45600,B58 Engine
+M2,M Series,2016,Coupe,Twin-Turbo I6,3.0,6,365,343,RWD,6-Speed Manual,4.2,155,19,26,4,52695,Compact M Car
+M3,M Series,2016,Sedan,Twin-Turbo I6,3.0,6,425,406,RWD,6-Speed Manual,3.9,155,17,26,5,64200,M Performance
+M4,M Series,2016,Coupe,Twin-Turbo I6,3.0,6,425,406,RWD,7-Speed DCT,4.1,155,17,25,4,66500,M Performance
+230i,2 Series,2017,Coupe,TwinPower Turbo I4,2.0,4,248,258,RWD,8-Speed Auto,5.5,130,24,35,4,34145,B48 Engine
+M240i,2 Series,2017,Coupe,TwinPower Turbo I6,3.0,6,335,369,RWD,6-Speed Manual,4.4,155,22,32,4,45445,Performance Coupe
+330i,3 Series,2017,Sedan,TwinPower Turbo I4,2.0,4,248,258,RWD,8-Speed Auto,5.6,130,25,36,5,39445,B48 Engine
+340i,3 Series,2017,Sedan,TwinPower Turbo I6,3.0,6,320,330,RWD,8-Speed Auto,4.6,155,23,34,5,46845,B58 Engine
+M2,M Series,2017,Coupe,Twin-Turbo I6,3.0,6,365,343,RWD,6-Speed Manual,4.2,155,19,26,4,53495,Compact M Car
+530i,5 Series,2017,Sedan,TwinPower Turbo I4,2.0,4,248,258,RWD,8-Speed Auto,6.2,130,25,34,5,51195,New Generation G30
+540i,5 Series,2017,Sedan,TwinPower Turbo I6,3.0,6,335,332,RWD,8-Speed Auto,4.9,155,23,34,5,56795,B58 Engine
+740i,7 Series,2017,Sedan,TwinPower Turbo I6,3.0,6,320,330,RWD,8-Speed Auto,5.4,155,22,30,5,82495,Luxury Flagship
+X3 xDrive30i,X Series,2018,SUV,TwinPower Turbo I4,2.0,4,248,258,AWD,8-Speed Auto,6.0,130,22,29,5,41245,New Generation G01
+X3 M40i,X Series,2018,SUV,TwinPower Turbo I6,3.0,6,355,369,AWD,8-Speed Auto,4.6,155,20,27,5,54495,M Performance SAV
+320i,3 Series,2018,Sedan,TwinPower Turbo I4,2.0,4,180,200,RWD,8-Speed Auto,7.1,130,24,36,5,34900,Entry Level
+330i,3 Series,2018,Sedan,TwinPower Turbo I4,2.0,4,248,258,RWD,8-Speed Auto,5.6,130,26,36,5,40250,B48 Engine
+340i,3 Series,2018,Sedan,TwinPower Turbo I6,3.0,6,320,330,RWD,8-Speed Auto,4.6,155,23,34,5,47800,B58 Engine
+M3,M Series,2018,Sedan,Twin-Turbo I6,3.0,6,425,406,RWD,6-Speed Manual,3.9,155,16,22,5,66500,M Performance
+M4,M Series,2018,Coupe,Twin-Turbo I6,3.0,6,425,406,RWD,7-Speed DCT,4.1,155,17,25,4,68500,M Performance
+230i,2 Series,2018,Coupe,TwinPower Turbo I4,2.0,4,248,258,RWD,8-Speed Auto,5.5,130,24,35,4,35945,B48 Engine
+M240i,2 Series,2018,Coupe,TwinPower Turbo I6,3.0,6,335,369,RWD,6-Speed Manual,4.4,155,22,32,4,45945,Performance Coupe
+530i,5 Series,2018,Sedan,TwinPower Turbo I4,2.0,4,248,258,RWD,8-Speed Auto,6.2,130,25,34,5,52395,G30 Generation
+540i,5 Series,2018,Sedan,TwinPower Turbo I6,3.0,6,335,332,RWD,8-Speed Auto,4.9,155,23,34,5,57395,B58 Engine
+330i,3 Series,2019,Sedan,TwinPower Turbo I4,2.0,4,255,295,RWD,8-Speed Auto,5.6,155,26,36,5,41245,New Generation G20
+M340i,3 Series,2020,Sedan,TwinPower Turbo I6,3.0,6,382,369,RWD,8-Speed Auto,4.2,155,23,32,5,54795,B58 Performance
+M340i xDrive,3 Series,2020,Sedan,TwinPower Turbo I6,3.0,6,382,369,AWD,8-Speed Auto,3.8,155,22,30,5,56795,AWD Performance
+330e,3 Series,2020,Sedan,TwinPower Turbo I4 PHEV,2.0,4,288,310,RWD,8-Speed Auto,5.6,143,30,75,5,45545,Plug-in Hybrid
+X5 xDrive40i,X Series,2019,SUV,TwinPower Turbo I6,3.0,6,335,330,AWD,8-Speed Auto,4.9,130,21,26,5,60700,New Generation G05
+X5 xDrive50i,X Series,2019,SUV,Twin-Turbo V8,4.4,8,456,479,AWD,8-Speed Auto,4.2,155,18,24,5,75750,V8 Power
+X3 xDrive30i,X Series,2019,SUV,TwinPower Turbo I4,2.0,4,248,258,AWD,8-Speed Auto,6.0,130,23,29,5,42550,G01 Generation
+X3 M40i,X Series,2019,SUV,TwinPower Turbo I6,3.0,6,355,369,AWD,8-Speed Auto,4.6,155,21,27,5,55695,M Performance SAV
+M2 Competition,M Series,2019,Coupe,Twin-Turbo I6,3.0,6,405,406,RWD,6-Speed Manual,4.0,155,18,25,4,59895,S55 Engine
+230i,2 Series,2019,Coupe,TwinPower Turbo I4,2.0,4,248,258,RWD,8-Speed Auto,5.5,130,24,35,4,36295,B48 Engine
+M240i,2 Series,2019,Coupe,TwinPower Turbo I6,3.0,6,335,369,RWD,6-Speed Manual,4.4,155,22,32,4,46895,Performance Coupe
+330i,3 Series,2020,Sedan,TwinPower Turbo I4,2.0,4,255,295,RWD,8-Speed Auto,5.6,155,28,36,5,41245,G20 Generation
+M340i,3 Series,2020,Sedan,TwinPower Turbo I6,3.0,6,382,369,RWD,8-Speed Auto,4.2,155,23,32,5,54795,B58 Performance
+M340i xDrive,3 Series,2020,Sedan,TwinPower Turbo I6,3.0,6,382,369,AWD,8-Speed Auto,3.8,155,22,30,5,56795,AWD Performance
+M3,M Series,2021,Sedan,Twin-Turbo I6,3.0,6,473,406,RWD,6-Speed Manual,3.9,155,16,23,5,69900,New Generation G80
+M3 Competition,M Series,2021,Sedan,Twin-Turbo I6,3.0,6,503,479,RWD,8-Speed Auto,3.8,180,16,22,5,72800,S58 Engine
+M4,M Series,2021,Coupe,Twin-Turbo I6,3.0,6,473,406,RWD,6-Speed Manual,4.1,155,16,23,4,71800,New Generation G82
+M4 Competition,M Series,2021,Coupe,Twin-Turbo I6,3.0,6,503,479,RWD,8-Speed Auto,3.8,180,16,23,4,74700,S58 Engine
+230i,2 Series,2021,Coupe,TwinPower Turbo I4,2.0,4,255,295,RWD,8-Speed Auto,5.5,155,26,34,4,36895,B48 Engine
+M240i,2 Series,2021,Coupe,TwinPower Turbo I6,3.0,6,382,369,RWD,8-Speed Auto,4.1,155,25,33,4,47895,B58 Performance
+530i,5 Series,2021,Sedan,TwinPower Turbo I4,2.0,4,248,258,RWD,8-Speed Auto,6.2,155,25,34,5,54200,G30 Generation
+540i,5 Series,2021,Sedan,TwinPower Turbo I6,3.0,6,335,332,RWD,8-Speed Auto,4.6,155,24,33,5,58995,B58 Engine
+X5 xDrive40i,X Series,2021,SUV,TwinPower Turbo I6,3.0,6,335,330,AWD,8-Speed Auto,5.3,130,21,26,5,59400,G05 Generation
+X5 M50i,X Series,2021,SUV,Twin-Turbo V8,4.4,8,523,553,AWD,8-Speed Auto,4.1,155,16,21,5,81800,V8 Performance
+X3 xDrive30i,X Series,2021,SUV,TwinPower Turbo I4,2.0,4,248,258,AWD,8-Speed Auto,6.0,130,25,29,5,43000,G01 Generation
+X3 M40i,X Series,2021,SUV,TwinPower Turbo I6,3.0,6,382,365,AWD,8-Step Auto,4.4,155,23,29,5,56000,M Performance SAV
+330i,3 Series,2022,Sedan,TwinPower Turbo I4,2.0,4,255,295,RWD,8-Speed Auto,5.6,155,28,36,5,42245,G20 Generation
+M340i,3 Series,2022,Sedan,TwinPower Turbo I6,3.0,6,382,369,RWD,8-Speed Auto,4.2,155,23,32,5,56245,B58 Performance
+M340i xDrive,3 Series,2022,Sedan,TwinPower Turbo I6,3.0,6,382,369,AWD,8-Speed Auto,3.8,155,22,30,5,58245,AWD Performance
+M3,M Series,2022,Sedan,Twin-Turbo I6,3.0,6,473,406,RWD,6-Speed Manual,3.9,155,16,23,5,72795,G80 Generation
+M3 Competition,M Series,2022,Sedan,Twin-Turbo I6,3.0,6,503,479,RWD,8-Speed Auto,3.8,180,16,22,5,75795,S58 Engine
+M4,M Series,2022,Coupe,Twin-Turbo I6,3.0,6,473,406,RWD,6-Speed Manual,4.1,155,16,23,4,74795,G82 Generation
+M4 Competition,M Series,2022,Coupe,Twin-Turbo I6,3.0,6,503,479,RWD,8-Speed Auto,3.8,180,16,23,4,77795,S58 Engine
+M2,M Series,2023,Coupe,Twin-Turbo I6,3.0,6,453,406,RWD,6-Speed Manual,4.1,155,18,25,4,63195,New Generation G87
+230i,2 Series,2022,Coupe,TwinPower Turbo I4,2.0,4,255,295,RWD,8-Speed Auto,5.5,155,26,34,4,37345,G42 Generation
+M240i,2 Series,2022,Coupe,TwinPower Turbo I6,3.0,6,382,369,RWD,8-Speed Auto,4.1,155,25,33,4,48845,B58 Performance
+530i,5 Series,2022,Sedan,TwinPower Turbo I4,2.0,4,248,258,RWD,8-Speed Auto,6.0,155,27,36,5,55195,G30 Generation
+540i,5 Series,2022,Sedan,TwinPower Turbo I6,3.0,6,335,332,RWD,8-Speed Auto,4.6,155,25,33,5,60495,B58 Engine
+740i,7 Series,2022,Sedan,TwinPower Turbo I6,3.0,6,335,330,RWD,8-Speed Auto,5.3,155,24,33,5,87795,G11 Generation
+X5 xDrive40i,X Series,2022,SUV,TwinPower Turbo I6,3.0,6,335,330,AWD,8-Speed Auto,5.3,130,21,26,5,60600,G05 Generation
+X3 xDrive30i,X Series,2022,SUV,TwinPower Turbo I4,2.0,4,248,258,AWD,8-Speed Auto,6.0,130,25,29,5,44550,G01 Generation
+330i,3 Series,2023,Sedan,TwinPower Turbo I4,2.0,4,255,295,RWD,8-Speed Auto,5.6,155,28,36,5,44795,G20 Generation
+M340i,3 Series,2023,Sedan,TwinPower Turbo I6,3.0,6,382,369,RWD,8-Speed Auto,4.2,155,23,32,5,58795,B58 Performance
+M340i xDrive,3 Series,2023,Sedan,TwinPower Turbo I6,3.0,6,382,369,AWD,8-Speed Auto,3.8,155,22,30,5,60795,AWD Performance
+M3,M Series,2023,Sedan,Twin-Turbo I6,3.0,6,473,406,RWD,6-Speed Manual,3.9,155,16,23,5,74695,G80 Generation
+M3 Competition,M Series,2023,Sedan,Twin-Turbo I6,3.0,6,503,479,RWD,8-Speed Auto,3.8,180,16,22,5,77695,S58 Engine
+M4,M Series,2023,Coupe,Twin-Turbo I6,3.0,6,473,406,RWD,6-Speed Manual,4.1,155,16,23,4,76695,G82 Generation
+M4 Competition,M Series,2023,Coupe,Twin-Turbo I6,3.0,6,503,479,RWD,8-Speed Auto,3.8,180,16,23,4,79695,S58 Engine
+M2,M Series,2023,Coupe,Twin-Turbo I6,3.0,6,453,406,RWD,6-Speed Manual,4.1,155,18,25,4,63195,G87 Generation
+430i,4 Series,2023,Coupe,TwinPower Turbo I4,2.0,4,255,295,RWD,8-Speed Auto,5.5,155,26,34,4,47400,G22 Generation
+M440i,4 Series,2023,Coupe,TwinPower Turbo I6,3.0,6,382,369,RWD,8-Speed Auto,4.3,155,24,33,4,58250,B58 Performance
+530i,5 Series,2023,Sedan,TwinPower Turbo I4,2.0,4,248,258,RWD,8-Speed Auto,6.0,155,27,36,5,57195,G30 Generation
+540i,5 Series,2023,Sedan,TwinPower Turbo I6,3.0,6,335,332,RWD,8-Speed Auto,4.6,155,25,33,5,62495,B58 Engine
+740i,7 Series,2023,Sedan,TwinPower Turbo I6,3.0,6,375,398,AWD,8-Speed Auto,4.9,155,23,30,5,96695,New Generation G70
+X3 xDrive30i,X Series,2023,SUV,TwinPower Turbo I4,2.0,4,248,258,AWD,8-Speed Auto,6.0,130,25,29,5,46250,G01 Generation
+X5 xDrive40i,X Series,2023,SUV,TwinPower Turbo I6,3.0,6,375,383,AWD,8-Speed Auto,5.3,130,23,28,5,64900,Mild Hybrid
+330i,3 Series,2024,Sedan,TwinPower Turbo I4,2.0,4,255,295,RWD,8-Speed Auto,5.6,155,28,36,5,45495,G20 Generation
+M340i,3 Series,2024,Sedan,TwinPower Turbo I6,3.0,6,382,369,RWD,8-Speed Auto,4.2,155,23,32,5,59495,B58 Performance
+M340i xDrive,3 Series,2024,Sedan,TwinPower Turbo I6,3.0,6,382,369,AWD,8-Speed Auto,3.8,155,22,30,5,61495,AWD Performance
+M3,M Series,2024,Sedan,Twin-Turbo I6,3.0,6,473,406,RWD,6-Speed Manual,3.9,155,16,23,5,76195,G80 Generation
+M3 Competition,M Series,2024,Sedan,Twin-Turbo I6,3.0,6,503,479,RWD,8-Speed Auto,3.8,180,16,22,5,79195,S58 Engine
+M4,M Series,2024,Coupe,Twin-Turbo I6,3.0,6,473,406,RWD,6-Speed Manual,4.1,155,16,23,4,78195,G82 Generation
+M4 Competition,M Series,2024,Coupe,Twin-Turbo I6,3.0,6,503,479,RWD,8-Speed Auto,3.8,180,16,23,4,81195,S58 Engine
+M2,M Series,2024,Coupe,Twin-Turbo I6,3.0,6,453,406,RWD,6-Speed Manual,4.1,155,18,25,4,64195,G87 Generation
+230i,2 Series,2024,Coupe,TwinPower Turbo I4,2.0,4,255,295,RWD,8-Speed Auto,5.5,155,26,34,4,39795,G42 Generation
+M240i,2 Series,2024,Coupe,TwinPower Turbo I6,3.0,6,382,369,AWD,8-Speed Auto,4.1,155,25,33,4,51795,B58 Performance
+430i,4 Series,2024,Coupe,TwinPower Turbo I4,2.0,4,255,295,RWD,8-Speed Auto,5.5,155,26,34,4,48395,G22 Generation
+M440i,4 Series,2024,Coupe,TwinPower Turbo I6,3.0,6,382,369,RWD,8-Speed Auto,4.3,155,24,33,4,59495,B58 Performance
+530i,5 Series,2024,Sedan,TwinPower Turbo I4,2.0,4,248,258,RWD,8-Speed Auto,6.0,155,27,36,5,58195,G60 New Generation
+550i,5 Series,2024,Sedan,TwinPower Turbo I6,3.0,6,375,383,AWD,8-Speed Auto,4.6,155,25,32,5,66795,Mild Hybrid
+740i,7 Series,2024,Sedan,TwinPower Turbo I6,3.0,6,375,398,AWD,8-Speed Auto,4.9,155,23,30,5,97395,G70 Generation
+X3 xDrive30i,X Series,2024,SUV,TwinPower Turbo I4,2.0,4,248,258,AWD,8-Speed Auto,6.0,130,25,29,5,47795,G01 Generation
+X5 xDrive40i,X Series,2024,SUV,TwinPower Turbo I6,3.0,6,375,383,AWD,8-Speed Auto,5.3,130,23,28,5,66895,Mild Hybrid
+i4 eDrive40,i Series,2024,Gran Coupe,Electric,0,0,335,317,RWD,Single-Speed,5.5,118,N/A,N/A,5,53195,EV 270-301 mi range
+iX xDrive50,i Series,2024,SUV,Dual Electric Motors,0,0,516,564,AWD,Single-Speed,4.6,124,N/A,N/A,5,87250,EV 300-324 mi range
+330i,3 Series,2025,Sedan,TwinPower Turbo I4,2.0,4,255,295,RWD,8-Speed Auto,5.6,155,28,36,5,47300,G20 Generation
+M340i,3 Series,2025,Sedan,TwinPower Turbo I6,3.0,6,382,369,RWD,8-Speed Auto,4.2,155,23,32,5,61300,B58 Performance
+M340i xDrive,3 Series,2025,Sedan,TwinPower Turbo I6,3.0,6,382,369,AWD,8-Speed Auto,3.8,155,22,30,5,63300,AWD Performance
+M3,M Series,2025,Sedan,Twin-Turbo I6,3.0,6,473,406,RWD,6-Speed Manual,3.9,155,16,23,5,78300,G80 Generation
+M3 Competition,M Series,2025,Sedan,Twin-Turbo I6,3.0,6,503,479,RWD,8-Speed Auto,3.8,180,16,22,5,81300,S58 Engine
+M4,M Series,2025,Coupe,Twin-Turbo I6,3.0,6,473,406,RWD,6-Speed Manual,4.1,155,16,23,4,80300,G82 Generation
+M4 Competition,M Series,2025,Coupe,Twin-Turbo I6,3.0,6,503,479,RWD,8-Speed Auto,3.8,180,16,23,4,83300,S58 Engine
+M2,M Series,2025,Coupe,Twin-Turbo I6,3.0,6,453,406,RWD,6-Speed Manual,4.1,155,18,25,4,66850,G87 Generation
+230i,2 Series,2025,Coupe,TwinPower Turbo I4,2.0,4,255,295,RWD,8-Speed Auto,5.5,155,26,34,4,40950,G42 Generation
+M240i,2 Series,2025,Coupe,TwinPower Turbo I6,3.0,6,382,369,AWD,8-Speed Auto,4.1,155,25,33,4,52950,B58 Performance
+430i,4 Series,2025,Coupe,TwinPower Turbo I4,2.0,4,255,295,RWD,8-Speed Auto,5.5,155,26,34,4,49850,G22 Generation
+M440i,4 Series,2025,Coupe,TwinPower Turbo I6,3.0,6,382,369,RWD,8-Speed Auto,4.3,155,24,33,4,61300,B58 Performance
+530i,5 Series,2025,Sedan,TwinPower Turbo I4,2.0,4,255,295,RWD,8-Speed Auto,5.9,155,28,36,5,59800,G60 New Generation
+550e,5 Series,2025,Sedan,TwinPower Turbo I6 PHEV,3.0,6,483,516,AWD,8-Speed Auto,4.7,155,30,78,5,71800,Plug-in Hybrid
+740i,7 Series,2025,Sedan,TwinPower Turbo I6,3.0,6,375,398,AWD,8-Speed Auto,4.9,155,23,30,5,98850,G70 Generation
+X3 xDrive30i,X Series,2025,SUV,TwinPower Turbo I4,2.0,4,255,295,AWD,8-Speed Auto,6.0,130,25,29,5,49800,New Generation G45
+X5 xDrive40i,X Series,2025,SUV,TwinPower Turbo I6,3.0,6,375,383,AWD,8-Speed Auto,5.3,130,23,28,5,68950,Mild Hybrid
+X7 xDrive40i,X Series,2025,SUV,TwinPower Turbo I6,3.0,6,375,383,AWD,8-Speed Auto,5.8,130,21,25,7,79800,3-Row Luxury
+i4 eDrive40,i Series,2025,Gran Coupe,Electric,0,0,335,317,RWD,Single-Speed,5.5,118,N/A,N/A,5,54150,EV 278-307 mi range
+i4 M50,i Series,2025,Gran Coupe,Dual Electric Motors,0,0,536,586,AWD,Single-Speed,3.9,140,N/A,N/A,5,69400,EV 227-271 mi range
+iX xDrive50,i Series,2025,SUV,Dual Electric Motors,0,0,516,564,AWD,Single-Speed,4.6,124,N/A,N/A,5,88900,EV 300-324 mi range
