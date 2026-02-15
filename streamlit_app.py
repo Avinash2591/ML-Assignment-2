@@ -15,13 +15,19 @@ from sklearn.metrics import (
 # --- PAGE CONFIGURATION ---
 st.set_page_config(page_title="BMW ML Analytics", page_icon="🚗", layout="wide")
  
-# Custom CSS for a clean look
+# Custom CSS with corrected parameter
 st.markdown("""
 <style>
     .main { background-color: #f5f7f9; }
-    .stMetric { background-color: #ffffff; padding: 15px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    .stMetric { 
+        background-color: #ffffff; 
+        padding: 15px; 
+        border-radius: 10px; 
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
+        border: 1px solid #e1e4e8;
+    }
 </style>
-    """, unsafe_base64=True)
+    """, unsafe_allow_html=True)
  
 st.title("🚗 BMW High-End vs Standard Classifier")
 st.write("An end-to-end ML deployment for BITS Pilani Assignment 2")
@@ -29,12 +35,12 @@ st.write("An end-to-end ML deployment for BITS Pilani Assignment 2")
 # --- SIDEBAR: CONTROLS ---
 with st.sidebar:
     st.header("📋 Input Controls")
-    uploaded_file = st.file_uploader("Upload Test Data (CSV)", type="csv") # Requirement (a) [cite: 91]
+    uploaded_file = st.file_uploader("Upload BMW Test Data (CSV)", type="csv") # Requirement (a) [cite: 91]
     st.divider()
     model_choice = st.selectbox(
         "Select Classification Model",
         ("Logistic Regression", "Decision Tree", "kNN", "Naive Bayes", "Random Forest", "XGBoost")
-    ) # Requirement (b) 
+    ) # Requirement (b) [cite: 92]
     st.info("The models classify cars based on an MSRP threshold of $55,695.")
  
 # Map display names to .pkl files
@@ -49,12 +55,15 @@ model_map = {
  
 def preprocess_data(df):
     data = df.copy()
+    # BMW specific target threshold
     if 'Target' not in data.columns and 'MSRP_USD' in data.columns:
         data['Target'] = (data['MSRP_USD'] > 55695).astype(int)
     le = LabelEncoder()
+    # Encoding categorical columns from BMW dataset
     for col in ['Series', 'Body_Type', 'Engine_Type', 'Drivetrain', 'Transmission']:
         if col in data.columns:
             data[col] = le.fit_transform(data[col].astype(str))
+    # Features required (Requirement 30) [cite: 30]
     features = ['Year', 'Displacement_L', 'Cylinders', 'Horsepower', 'Torque_lb_ft',
                 '0_60_mph_sec', 'Top_Speed_mph', 'Fuel_Economy_City_mpg', 
                 'Fuel_Economy_Highway_mpg', 'Seating_Capacity', 'Series', 'Body_Type']
@@ -69,7 +78,7 @@ if uploaded_file is not None:
         st.dataframe(df_test, use_container_width=True)
  
     try:
-        # Load Model
+        # Load Model from /model folder (Requirement 55) [cite: 55]
         model_path = os.path.join("model", model_map[model_choice])
         model = joblib.load(model_path)
         # Preprocess
@@ -78,10 +87,11 @@ if uploaded_file is not None:
         X_test_scaled = scaler.fit_transform(X_test)
         # Predictions
         y_pred = model.predict(X_test_scaled)
+        # Handle probability for AUC metric
         y_prob = model.predict_proba(X_test_scaled)[:, 1] if hasattr(model, "predict_proba") else y_pred
         if y_true is not None:
             with tab1:
-                st.subheader(f"Results: {model_choice}") # Requirement (c) 
+                st.subheader(f"Model Performance: {model_choice}") # Requirement (c) [cite: 93]
                 m1, m2, m3 = st.columns(3)
                 m1.metric("Accuracy Score", f"{accuracy_score(y_true, y_pred):.3f}")
                 m2.metric("AUC Score", f"{roc_auc_score(y_true, y_prob):.3f}")
@@ -103,9 +113,9 @@ if uploaded_file is not None:
                     st.write("**Detailed Classification Report**")
                     st.code(classification_report(y_true, y_pred))
         else:
-            st.warning("Ground truth labels missing for metrics calculation.")
+            st.warning("MSRP_USD column not found. Results shown without evaluation metrics.")
  
     except Exception as e:
-        st.error(f"Error loading {model_choice}: {e}")
+        st.error(f"Error loading {model_choice}: {e}. Ensure the .pkl file exists in the /model/ directory.")
 else:
-    st.info("👋 Welcome! Please upload your BMW dataset to begin analysis.")
+    st.info("👋 Welcome! Please upload your BMW dataset (CSV) in the sidebar to begin analysis.")
