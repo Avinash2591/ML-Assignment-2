@@ -54,7 +54,7 @@ Feature Breakdown:
 | XGBoost (Ensemble)       | 0.892    | 0.953 | 1.000     | 0.782  | 0.878 | 0.802 |
 
 
-## d. observations on the performance of each model on the chosen dataset.
+## d. Observations on the performance of each model on the chosen dataset.
 
 | ML Model Name           | Observation about model performance |
 | :---                    | :---                                |
