@@ -27,11 +27,17 @@ For the purpose of this assignment, a binary target variable (Target) was engine
 Feature Breakdown:
 
 **Model & Series**: The specific name and vehicle line (e.g., 3 Series, X5).
+
 **Year**: The production year (2012–2025).
+
 **Engine & Transmission**: Technical specifications including Engine_Type, Displacement_L, Cylinders, and Transmission type.
+
 **Performance Metrics**: Key indicators such as Horsepower, Torque_lb_ft, 0_60_mph_sec acceleration, and Top_Speed_mph.
+
 **Efficiency**: Fuel_Economy_City_mpg and Fuel_Economy_Highway_mpg.
+
 **Dimensions**: Body_Type (e.g., Sedan, SUV, Coupe) and Seating_Capacity.
+
 **Drivetrain**: Wheel drive configuration (RWD, AWD).
 
 
