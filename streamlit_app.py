@@ -1,151 +1,116 @@
-{
- "cells": [
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "65b4e771-cf13-4ee3-b12d-52705fd7be39",
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "import streamlit as st\n",
-    "import pandas as pd\n",
-    "import numpy as np\n",
-    "import joblib\n",
-    "import os\n",
-    "import matplotlib.pyplot as plt\n",
-    "import seaborn as sns\n",
-    "from sklearn.preprocessing import LabelEncoder, StandardScaler\n",
-    "from sklearn.metrics import (\n",
-    "    accuracy_score, precision_score, recall_score, \n",
-    "    f1_score, roc_auc_score, matthews_corrcoef, \n",
-    "    confusion_matrix, classification_report\n",
-    ")\n",
-    " \n",
-    "# Page Configuration\n",
-    "st.set_page_config(page_title=\"BMW Price Tier Classifier\", layout=\"wide\")\n",
-    " \n",
-    "st.title(\"🚗 BMW High-End vs Standard Classifier\")\n",
-    "st.markdown(\"### BITS Pilani ML Assignment 2 - Model Deployment\")\n",
-    " \n",
-    "# --- SIDEBAR: DATA UPLOAD (Requirement 91) ---\n",
-    "st.sidebar.header(\"1. Upload Test Data\")\n",
-    "uploaded_file = st.sidebar.file_uploader(\"Upload BMW CSV for Testing\", type=\"csv\") [cite: 91]\n",
-    " \n",
-    "# --- SIDEBAR: MODEL SELECTION (Requirement 92) ---\n",
-    "st.sidebar.header(\"2. Choose Model\")\n",
-    "model_choice = st.sidebar.selectbox(\n",
-    "    \"Select ML Model\",\n",
-    "    (\"Logistic Regression\", \"Decision Tree\", \"kNN\", \"Naive Bayes\", \"Random Forest\", \"XGBoost\")\n",
-    ") [cite: 92]\n",
-    " \n",
-    "# Map display names to the exact .pkl filenames created in the training script\n",
-    "model_map = {\n",
-    "    \"Logistic Regression\": \"logistic_regression.pkl\",\n",
-    "    \"Decision Tree\": \"decision_tree.pkl\",\n",
-    "    \"kNN\": \"knn.pkl\",\n",
-    "    \"Naive Bayes\": \"naive_bayes.pkl\",\n",
-    "    \"Random Forest\": \"random_forest.pkl\",\n",
-    "    \"XGBoost\": \"xgboost.pkl\"\n",
-    "}\n",
-    " \n",
-    "def preprocess_bmw_data(df):\n",
-    "    \"\"\"Processes BMW features and sets Target based on MSRP median.\"\"\"\n",
-    "    data = df.copy()\n",
-    "    # Define Target: 1 if MSRP > $55,695 (Median), 0 otherwise\n",
-    "    if 'Target' not in data.columns and 'MSRP_USD' in data.columns:\n",
-    "        data['Target'] = (data['MSRP_USD'] > 55695).astype(int)\n",
-    "    # Fill missing values for fuel economy\n",
-    "    if 'Fuel_Economy_City_mpg' in data.columns:\n",
-    "        data['Fuel_Economy_City_mpg'] = data['Fuel_Economy_City_mpg'].fillna(data['Fuel_Economy_City_mpg'].median())\n",
-    "    if 'Fuel_Economy_Highway_mpg' in data.columns:\n",
-    "        data['Fuel_Economy_Highway_mpg'] = data['Fuel_Economy_Highway_mpg'].fillna(data['Fuel_Economy_Highway_mpg'].median())\n",
-    " \n",
-    "    # Label Encoding for categorical columns used in training\n",
-    "    le = LabelEncoder()\n",
-    "    cat_cols = ['Series', 'Body_Type', 'Engine_Type', 'Drivetrain', 'Transmission']\n",
-    "    for col in cat_cols:\n",
-    "        if col in data.columns:\n",
-    "            data[col] = le.fit_transform(data[col].astype(str))\n",
-    "    # The 12 features used during training [cite: 30]\n",
-    "    features = [\n",
-    "        'Year', 'Displacement_L', 'Cylinders', 'Horsepower', 'Torque_lb_ft',\n",
-    "        '0_60_mph_sec', 'Top_Speed_mph', 'Fuel_Economy_City_mpg', \n",
-    "        'Fuel_Economy_Highway_mpg', 'Seating_Capacity', 'Series', 'Body_Type'\n",
-    "    ]\n",
-    "    available_features = [f for f in features if f in data.columns]\n",
-    "    return data[available_features], data['Target'] if 'Target' in data.columns else None\n",
-    " \n",
-    "if uploaded_file is not None:\n",
-    "    df_test = pd.read_csv(uploaded_file)\n",
-    "    st.success(\"Test dataset loaded successfully!\")\n",
-    "    with st.expander(\"Preview Test Data\"):\n",
-    "        st.dataframe(df_test.head())\n",
-    " \n",
-    "    try:\n",
-    "        # Load the selected model from the /model directory [cite: 55]\n",
-    "        model_path = os.path.join(\"model\", model_map[model_choice])\n",
-    "        model = joblib.load(model_path)\n",
-    "        # Preprocess\n",
-    "        X_test, y_true = preprocess_bmw_data(df_test)\n",
-    "        # Scaling\n",
-    "        scaler = StandardScaler()\n",
-    "        X_test_scaled = scaler.fit_transform(X_test)\n",
-    "        # Predictions\n",
-    "        y_pred = model.predict(X_test_scaled)\n",
-    "        y_prob = model.predict_proba(X_test_scaled)[:, 1] if hasattr(model, \"predict_proba\") else y_pred\n",
-    "        # --- REQUIREMENT (c): DISPLAY EVALUATION METRICS ---\n",
-    "        st.subheader(f\"📊 Evaluation Metrics: {model_choice}\") [cite: 93]\n",
-    "        if y_true is not None:\n",
-    "            m1, m2, m3, m4, m5, m6 = st.columns(6)\n",
-    "            m1.metric(\"Accuracy\", f\"{accuracy_score(y_true, y_pred):.3f}\")\n",
-    "            m2.metric(\"AUC Score\", f\"{roc_auc_score(y_true, y_prob):.3f}\")\n",
-    "            m3.metric(\"Precision\", f\"{precision_score(y_true, y_pred):.3f}\")\n",
-    "            m4.metric(\"Recall\", f\"{recall_score(y_true, y_pred):.3f}\")\n",
-    "            m5.metric(\"F1 Score\", f\"{f1_score(y_true, y_pred):.3f}\")\n",
-    "            m6.metric(\"MCC Score\", f\"{matthews_corrcoef(y_true, y_pred):.3f}\")\n",
-    "            # --- REQUIREMENT (d): CONFUSION MATRIX & REPORT ---\n",
-    "            st.divider() [cite: 94]\n",
-    "            col_l, col_r = st.columns(2)\n",
-    "            with col_l:\n",
-    "                st.subheader(\"Confusion Matrix\")\n",
-    "                cm = confusion_matrix(y_true, y_pred)\n",
-    "                fig, ax = plt.subplots()\n",
-    "                sns.heatmap(cm, annot=True, fmt='d', cmap='Oranges', ax=ax)\n",
-    "                st.pyplot(fig)\n",
-    "            with col_r:\n",
-    "                st.subheader(\"Classification Report\")\n",
-    "                st.code(classification_report(y_true, y_pred))\n",
-    "        else:\n",
-    "            st.warning(\"Column 'MSRP_USD' not found. Prediction results shown without ground-truth metrics.\")\n",
-    "            st.write(\"Predictions:\", y_pred)\n",
-    "    except FileNotFoundError:\n",
-    "        st.error(f\"Model file '{model_map[model_choice]}' not found in the /model/ folder.\")\n",
-    "    except Exception as e:\n",
-    "        st.error(f\"Processing Error: {e}\")\n",
-    "else:\n",
-    "    st.info(\"💡 Please upload the BMW CSV file to begin.\")"
-   ]
-  }
- ],
- "metadata": {
-  "kernelspec": {
-   "display_name": "Python [conda env:base] *",
-   "language": "python",
-   "name": "conda-base-py"
-  },
-  "language_info": {
-   "codemirror_mode": {
-    "name": "ipython",
-    "version": 3
-   },
-   "file_extension": ".py",
-   "mimetype": "text/x-python",
-   "name": "python",
-   "nbconvert_exporter": "python",
-   "pygments_lexer": "ipython3",
-   "version": "3.12.7"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 5
+import streamlit as st
+import pandas as pd
+import numpy as np
+import joblib
+import os
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.preprocessing import LabelEncoder, StandardScaler
+from sklearn.metrics import (
+    accuracy_score, precision_score, recall_score, 
+    f1_score, roc_auc_score, matthews_corrcoef, 
+    confusion_matrix, classification_report
+)
+ 
+# Page Configuration
+st.set_page_config(page_title="BMW Price Tier Classifier", layout="wide")
+ 
+st.title("🚗 BMW High-End vs Standard Classifier")
+st.markdown("### BITS Pilani ML Assignment 2 - Model Deployment")
+ 
+# --- SIDEBAR: DATA UPLOAD (Requirement 91) ---
+st.sidebar.header("1. Upload Test Data")
+uploaded_file = st.sidebar.file_uploader("Upload BMW CSV for Testing", type="csv")
+ 
+# --- SIDEBAR: MODEL SELECTION (Requirement 92) ---
+st.sidebar.header("2. Choose Model")
+model_choice = st.sidebar.selectbox(
+    "Select ML Model",
+    ("Logistic Regression", "Decision Tree", "kNN", "Naive Bayes", "Random Forest", "XGBoost")
+)
+ 
+# Map display names to the exact .pkl filenames created in the training script
+model_map = {
+    "Logistic Regression": "logistic_regression.pkl",
+    "Decision Tree": "decision_tree.pkl",
+    "kNN": "knn.pkl",
+    "Naive Bayes": "naive_bayes.pkl",
+    "Random Forest": "random_forest.pkl",
+    "XGBoost": "xgboost.pkl"
 }
+ 
+def preprocess_bmw_data(df):
+    """Processes BMW features and sets Target based on MSRP median."""
+    data = df.copy()
+    # Define Target: 1 if MSRP > $55,695 (Median), 0 otherwise
+    if 'Target' not in data.columns and 'MSRP_USD' in data.columns:
+        data['Target'] = (data['MSRP_USD'] > 55695).astype(int)
+    # Fill missing values for fuel economy
+    if 'Fuel_Economy_City_mpg' in data.columns:
+        data['Fuel_Economy_City_mpg'] = data['Fuel_Economy_City_mpg'].fillna(data['Fuel_Economy_City_mpg'].median())
+    if 'Fuel_Economy_Highway_mpg' in data.columns:
+        data['Fuel_Economy_Highway_mpg'] = data['Fuel_Economy_Highway_mpg'].fillna(data['Fuel_Economy_Highway_mpg'].median())
+ 
+    # Label Encoding for categorical columns used in training
+    le = LabelEncoder()
+    cat_cols = ['Series', 'Body_Type', 'Engine_Type', 'Drivetrain', 'Transmission']
+    for col in cat_cols:
+        if col in data.columns:
+            data[col] = le.fit_transform(data[col].astype(str))
+    # The 12 features used during training
+    features = [
+        'Year', 'Displacement_L', 'Cylinders', 'Horsepower', 'Torque_lb_ft',
+        '0_60_mph_sec', 'Top_Speed_mph', 'Fuel_Economy_City_mpg', 
+        'Fuel_Economy_Highway_mpg', 'Seating_Capacity', 'Series', 'Body_Type'
+    ]
+    available_features = [f for f in features if f in data.columns]
+    return data[available_features], data['Target'] if 'Target' in data.columns else None
+ 
+if uploaded_file is not None:
+    df_test = pd.read_csv(uploaded_file)
+    st.success("Test dataset loaded successfully!")
+    with st.expander("Preview Test Data"):
+        st.dataframe(df_test.head())
+ 
+    try:
+        # Load the selected model from the /model directory
+        model_path = os.path.join("model", model_map[model_choice])
+        model = joblib.load(model_path)
+        # Preprocess
+        X_test, y_true = preprocess_bmw_data(df_test)
+        # Scaling
+        scaler = StandardScaler()
+        X_test_scaled = scaler.fit_transform(X_test)
+        # Predictions
+        y_pred = model.predict(X_test_scaled)
+        y_prob = model.predict_proba(X_test_scaled)[:, 1] if hasattr(model, "predict_proba") else y_pred
+        # --- REQUIREMENT (c): DISPLAY EVALUATION METRICS (Requirement 93) ---
+        st.subheader(f"📊 Evaluation Metrics: {model_choice}")
+        if y_true is not None:
+            m1, m2, m3, m4, m5, m6 = st.columns(6)
+            m1.metric("Accuracy", f"{accuracy_score(y_true, y_pred):.3f}")
+            m2.metric("AUC Score", f"{roc_auc_score(y_true, y_prob):.3f}")
+            m3.metric("Precision", f"{precision_score(y_true, y_pred):.3f}")
+            m4.metric("Recall", f"{recall_score(y_true, y_pred):.3f}")
+            m5.metric("F1 Score", f"{f1_score(y_true, y_pred):.3f}")
+            m6.metric("MCC Score", f"{matthews_corrcoef(y_true, y_pred):.3f}")
+            # --- REQUIREMENT (d): CONFUSION MATRIX & REPORT (Requirement 94) ---
+            st.divider()
+            col_l, col_r = st.columns(2)
+            with col_l:
+                st.subheader("Confusion Matrix")
+                cm = confusion_matrix(y_true, y_pred)
+                fig, ax = plt.subplots()
+                sns.heatmap(cm, annot=True, fmt='d', cmap='Oranges', ax=ax)
+                st.pyplot(fig)
+            with col_r:
+                st.subheader("Classification Report")
+                st.code(classification_report(y_true, y_pred))
+        else:
+            st.warning("Column 'MSRP_USD' not found. Evaluation metrics cannot be calculated.")
+    except FileNotFoundError:
+        st.error(f"Model file '{model_map[model_choice]}' not found in the /model/ folder.")
+    except Exception as e:
+        st.error(f"Processing Error: {e}")
+else:
+    st.info("💡 Please upload the BMW CSV file to begin.")
